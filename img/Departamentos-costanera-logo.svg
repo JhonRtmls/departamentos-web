@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.1 41.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #e3672a;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        fill: #b1b6b6;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x=".98" y="11.93" width="17.93" height="29.93"/>
+  <rect class="cls-1" x="6.02" y="15.71" width="7.85" height="10.59"/>
+  <rect class="cls-1" x="5.17" y="30.45" width="9.56" height="9.11"/>
+  <polyline class="cls-2" points="1.5 30.53 1.5 12.3 18.39 12.3 18.39 30.93"/>
+  <rect class="cls-3" x="24.29" y="6.77" width="21.02" height="35.08"/>
+  <rect class="cls-1" x="30.19" y="11.2" width="9.21" height="12.42"/>
+  <rect class="cls-1" x="29.2" y="28.48" width="11.2" height="10.68"/>
+  <polyline class="cls-2" points="24.9 28.58 24.9 7.21 44.7 7.21 44.7 29.05"/>
+  <rect class="cls-3" x="50.83" y=".99" width="24.48" height="40.86"/>
+  <rect class="cls-1" x="57.71" y="6.15" width="10.72" height="14.46"/>
+  <rect class="cls-1" x="56.55" y="26.28" width="13.05" height="12.44"/>
+  <polyline class="cls-2" points="51.54 26.4 51.54 1.5 74.6 1.5 74.6 26.94"/>
+</svg>

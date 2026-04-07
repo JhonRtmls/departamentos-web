@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamentos Costanera - Alojamiento Premium en Punta Arenas</title>
+    <meta name="description" content="Departamentos de 2 pisos a pasos de la Costanera del Estrecho. Comodidad, seguridad y excelente ubicación en Punta Arenas. Reserva hoy mismo.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="img/Departamentos-costanera-logo.svg" alt="Logo" class="logo-img">
+                    <span>Departamentos Costanera</span>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+                        <li><a href="#departamentos" data-i18n="nav_depts">Departamentos</a></li>
+                        <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+                        <li><a href="#ubicacion" data-i18n="nav_location">Ubicación</a></li>
+                        <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+                        <li><a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" class="btn-reserve" data-i18n="nav_reserve">Reservar Ahora</a></li>
+                    </ul>
+                    <div class="lang-dropdown">
+                        <div id="selected-lang" class="lang-selected">
+                            <span class="current-lang">ES</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-options">
+                            <div class="lang-option" data-lang="es">
+                                <span>ES</span>
+                            </div>
+                            <div class="lang-option" data-lang="en">
+                                <span>EN</span>
+                            </div>
+                            <div class="lang-option" data-lang="pt">
+                                <span>PT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <img src="img/hero.jpeg" alt="Hero Background" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">Tu refugio en el corazón de Punta Arenas</h1>
+            <p data-i18n="hero_subtitle">A pasos de la Costanera del Estrecho, descubre la mezcla perfecta entre comodidad y ubicación privilegiada.</p>
+            <a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" class="btn-reserve" style="font-size: 1.1rem; padding: 15px 40px;" data-i18n="hero_btn">Ver Disponibilidad</a>
+        </div>
+    </section>
+
+    <!-- Departamentos -->
+    <section id="departamentos">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="section_depts_title">Nuestros Departamentos</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="stacked-slider-wrapper">
+                <div class="dept-slider-container stacked">
+                    <div class="dept-slider">
+                        <!-- Slide 1 -->
+                        <div class="slide active" data-index="0">
+                            <div class="card-inner">
+                                <div class="slide-image">
+                                    <img src="img/slide1.webp" alt="Departamento 1">
+                                </div>
+                                <div class="slide-content">
+                                    <div class="slide-content-brief">
+                                        <h3 data-i18n="dept_title">Interior Premium</h3>
+                                        <p data-i18n="dept_brief">Diseño moderno y funcional.</p>
+                                        <button class="btn-expand" data-i18n="dept_btn_more">Ver Detalles</button>
+                                    </div>
+                                    <div class="slide-content-detail">
+                                        <div class="detail-grid">
+                                            <div class="detail-item"><i class="fas fa-users"></i><span data-i18n="dept_features_guests">4 Huéspedes</span></div>
+                                            <div class="detail-item"><i class="fas fa-bed"></i><span data-i18n="dept_features_beds">2 Dormitorios</span></div>
+                                            <div class="detail-item"><i class="fas fa-bath"></i><span data-i18n="dept_features_baths">1 Baño</span></div>
+                                            <div class="detail-item"><i class="fas fa-wifi"></i><span data-i18n="dept_features_wifi">Fibra Óptica</span></div>
+                                        </div>
+                                        <div class="detail-text"><p data-i18n="dept_detail_text">Nuestros departamentos cuentan con calefacción central y equipamiento premium.</p></div>
+                                        <button class="btn-collapse"><i class="fas fa-times"></i></button>
+                                        <a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" class="btn-reserve" data-i18n="nav_reserve" style="margin-top: 20px; display: inline-block;">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional Slides (Same template) -->
+                        <div class="slide next" data-index="1">
+                            <div class="card-inner">
+                                <div class="slide-image"><img src="img/slide2.webp" alt="Departamento 2"></div>
+                                <div class="slide-content"><div class="slide-content-brief"><h3 data-i18n="dept_title">Interior Premium</h3><p data-i18n="dept_brief">Diseño moderno y funcional.</p><button class="btn-expand" data-i18n="dept_btn_more">Ver Detalles</button></div></div>
+                            </div>
+                        </div>
+                        <div class="slide" data-index="2">
+                            <div class="card-inner">
+                                <div class="slide-image"><img src="img/slide3.webp" alt="Departamento 3"></div>
+                                <div class="slide-content"><div class="slide-content-brief"><h3 data-i18n="dept_title">Interior Premium</h3><p data-i18n="dept_brief">Diseño moderno y funcional.</p><button class="btn-expand" data-i18n="dept_btn_more">Ver Detalles</button></div></div>
+                            </div>
+                        </div>
+                        <div class="slide" data-index="3">
+                            <div class="card-inner">
+                                <div class="slide-image"><img src="img/slide4.webp" alt="Departamento 4"></div>
+                                <div class="slide-content"><div class="slide-content-brief"><h3 data-i18n="dept_title">Interior Premium</h3><p data-i18n="dept_brief">Diseño moderno y funcional.</p><button class="btn-expand" data-i18n="dept_btn_more">Ver Detalles</button></div></div>
+                            </div>
+                        </div>
+                        <div class="slide" data-index="4">
+                            <div class="card-inner">
+                                <div class="slide-image"><img src="img/slide5.webp" alt="Departamento 5"></div>
+                                <div class="slide-content"><div class="slide-content-brief"><h3 data-i18n="dept_title">Interior Premium</h3><p data-i18n="dept_brief">Diseño moderno y funcional.</p><button class="btn-expand" data-i18n="dept_btn_more">Ver Detalles</button></div></div>
+                            </div>
+                        </div>
+                        <div class="slide" data-index="5">
+                            <div class="card-inner">
+                                <div class="slide-image"><img src="img/slide6.webp" alt="Departamento 6"></div>
+                                <div class="slide-content"><div class="slide-content-brief"><h3 data-i18n="dept_title">Interior Premium</h3><p data-i18n="dept_brief">Diseño moderno y funcional.</p><button class="btn-expand" data-i18n="dept_btn_more">Ver Detalles</button></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities / Servicios -->
+    <section id="servicios" class="amenities">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="section_services_title">Servicios e Instalaciones</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="amenity-grid">
+                <div class="amenity-item">
+                    <i class="fas fa-wifi"></i>
+                    <h4 data-i18n="service_wifi_title">Wi-Fi Gratis</h4>
+                    <p data-i18n="service_wifi_text">Fibra óptica de alta velocidad en todo el recinto.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-car"></i>
+                    <h4 data-i18n="service_parking_title">Estacionamiento</h4>
+                    <p data-i18n="service_parking_text">Espacio seguro y gratuito para nuestros huéspedes.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h4 data-i18n="service_heating_title">Calefacción</h4>
+                    <p data-i18n="service_heating_text">Ambiente cálido garantizado para el clima magallánico.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-utensils"></i>
+                    <h4 data-i18n="service_kitchen_title">Cocina Completa</h4>
+                    <p data-i18n="service_kitchen_text">Equipada con microondas, hervidor y utensilios.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-tv"></i>
+                    <h4 data-i18n="service_tv_title">Smart TV</h4>
+                    <p data-i18n="service_tv_text">Acceso a tus plataformas favoritas en cada departamento.</p>
+                </div>
+                <div class="amenity-item">
+                    <i class="fas fa-lock"></i>
+                    <h4 data-i18n="service_security_title">Seguridad</h4>
+                    <p data-i18n="service_security_text">Vigilancia y accesos controlados para tu tranquilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="section_location_title">Ubicación Estratégica</h2>
+                <p data-i18n="section_location_text">Encuéntranos en Mejicana 1481, a metros de la Costanera del Estrecho.</p>
+                <div class="underline"></div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <!-- Condiciones de Pago -->
+    <section id="condiciones" class="amenities" style="background: #fff; border-top: 1px solid #eee;">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="section_policies_title">Políticas y Pago</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="dept-grid">
+                <div class="amenity-item" style="text-align: left;">
+                    <h4><i class="fas fa-credit-card" style="color: #e3672a;"></i> <span data-i18n="policy_payment_title">Métodos de Pago</span></h4>
+                    <p data-i18n="policy_payment_text">Aceptamos tarjetas de crédito, débito y transferencia bancaria.</p>
+                </div>
+                <div class="amenity-item" style="text-align: left;">
+                    <h4><i class="fas fa-info-circle" style="color: #e3672a;"></i> <span data-i18n="policy_cancel_title">Cancelación</span></h4>
+                    <p data-i18n="policy_cancel_text">Consulta nuestras políticas flexibles según la temporada de reserva.</p>
+                </div>
+                <div class="amenity-item" style="text-align: left;">
+                    <h4><i class="fas fa-clock" style="color: #e3672a;"></i> <span data-i18n="policy_checkout_title">Check-in / Out</span></h4>
+                    <p data-i18n="policy_checkout_text">Check-in: 15:00 hrs | Check-out: 11:00 hrs. Flexibilidad bajo disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="section_contact_title">Contáctanos</h2>
+                <div class="underline"></div>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form id="contactForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <input type="text" placeholder="Nombre completo" data-i18n-placeholder="form_name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        <input type="email" placeholder="Email" data-i18n-placeholder="form_email" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                    </div>
+                    <textarea placeholder="Tu mensaje o consulta..." data-i18n-placeholder="form_message" rows="5" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;"></textarea>
+                    <button type="submit" class="btn-reserve" style="width: 100%; border: none; cursor: pointer;" data-i18n="form_btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="color: #e3672a;" data-i18n="logo">Costanera</h4>
+                    <p data-i18n="footer_text">Departamentos totalmente equipados en el fin del mundo. Tu hogar en Punta Arenas.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/departamentoscostanera" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/departamentoscostanera" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:contacto@departamentoscostanera.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_links_title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#departamentos" data-i18n="nav_depts">Departamentos</a></li>
+                        <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
+                        <li><a href="#ubicacion" data-i18n="nav_location">Mapa</a></li>
+                        <li><a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" data-i18n="nav_reserve">Reservas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_contact_title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li> Mejicana 1481, Punta Arenas</li>
+                        <li>+56 9 8596 0703</li>
+                        <li>contacto@departamentoscostanera.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.6;">
+                <p data-i18n="footer_rights">&copy; 2024 Departamentos Costanera. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/56985960703" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Custom JS -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
