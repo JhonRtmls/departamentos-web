@@ -37,8 +37,8 @@
                         <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
                         <li><a href="#ubicacion" data-i18n="nav_location">Ubicación</a></li>
                         <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
-                        <li><a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" class="btn-reserve" data-i18n="nav_reserve">Reservar Ahora</a></li>
                     </ul>
+                    <a href="#" class="btn-reserve" data-i18n="nav_reserve">Reservar Ahora</a>
                     <div class="lang-dropdown">
                         <div id="selected-lang" class="lang-selected">
                             <span class="current-lang">ES</span>
@@ -59,6 +59,9 @@
                             </div>
                         </div>
                     </div>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </nav>
         </div>
@@ -71,7 +74,7 @@
         <div class="container hero-content">
             <h1 data-i18n="hero_title">Tu refugio en el corazón de Punta Arenas</h1>
             <p data-i18n="hero_subtitle">A pasos de la Costanera del Estrecho, descubre la mezcla perfecta entre comodidad y ubicación privilegiada.</p>
-            <a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" class="btn-reserve" style="font-size: 1.1rem; padding: 15px 40px;" data-i18n="hero_btn">Ver Disponibilidad</a>
+            <a href="#" class="btn-reserve hero-btn" data-i18n="hero_btn">Ver Disponibilidad</a>
         </div>
     </section>
 
@@ -106,7 +109,7 @@
                                         </div>
                                         <div class="detail-text"><p data-i18n="dept_detail_text">Nuestros departamentos cuentan con calefacción central y equipamiento premium.</p></div>
                                         <button class="btn-collapse"><i class="fas fa-times"></i></button>
-                                        <a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" class="btn-reserve" data-i18n="nav_reserve" style="margin-top: 20px; display: inline-block;">Reservar</a>
+                                        <a href="#" class="btn-reserve" data-i18n="nav_reserve" style="margin-top: 20px; display: inline-block;">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -241,14 +244,14 @@
                 <h2 data-i18n="section_contact_title">Contáctanos</h2>
                 <div class="underline"></div>
             </div>
-            <div style="max-width: 600px; margin: 0 auto;">
-                <form id="contactForm">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-                        <input type="text" placeholder="Nombre completo" data-i18n-placeholder="form_name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        <input type="email" placeholder="Email" data-i18n-placeholder="form_email" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-grid">
+                        <input type="text" placeholder="Nombre completo" data-i18n-placeholder="form_name" required class="form-input">
+                        <input type="email" placeholder="Email" data-i18n-placeholder="form_email" required class="form-input">
                     </div>
-                    <textarea placeholder="Tu mensaje o consulta..." data-i18n-placeholder="form_message" rows="5" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;"></textarea>
-                    <button type="submit" class="btn-reserve" style="width: 100%; border: none; cursor: pointer;" data-i18n="form_btn">Enviar Mensaje</button>
+                    <textarea placeholder="Tu mensaje o consulta..." data-i18n-placeholder="form_message" rows="5" required class="form-textarea"></textarea>
+                    <button type="submit" class="btn-reserve form-submit" data-i18n="form_btn">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
@@ -273,7 +276,7 @@
                         <li><a href="#departamentos" data-i18n="nav_depts">Departamentos</a></li>
                         <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
                         <li><a href="#ubicacion" data-i18n="nav_location">Mapa</a></li>
-                        <li><a href="https://direct-book.com/properties/departamentoscostaneradirect" target="_blank" data-i18n="nav_reserve">Reservas</a></li>
+                        <li><a href="#" data-i18n="nav_reserve">Reservas</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -292,7 +295,7 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/56985960703" target="_blank" class="whatsapp-btn">
+    <a href="#" class="whatsapp-btn">
         <i class="fab fa-whatsapp"></i>
     </a>
 
