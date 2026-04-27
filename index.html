@@ -19,6 +19,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lenis.css">
 </head>
 <body>
 
@@ -67,7 +68,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="inicio" class="hero">
         <img src="img/hero.jpeg" alt="Hero Background" class="hero-img">
         <div class="hero-overlay"></div>
@@ -160,7 +161,7 @@
     <section id="servicios" class="amenities">
         <div class="container">
             <div class="section-title">
-                <h2 data-i18n="section_services_title">Servicios e Instalaciones</h2>
+                <h2 data-i18n="section_services_title">Servicios</h2>
                 <div class="underline"></div>
             </div>
             <div class="amenity-grid">
@@ -198,13 +199,24 @@
         </div>
     </section>
 
+    <section id="sustentabilidad">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="section_sustentabilidad_title">Sustentabilidad</h2>
+                <div class="underline"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Ubicación -->
     <section id="ubicacion">
         <div class="container">
             <div class="section-title">
                 <h2 data-i18n="section_location_title">Ubicación Estratégica</h2>
-                <p data-i18n="section_location_text">Encuéntranos en Mejicana 1481, a metros de la Costanera del Estrecho.</p>
                 <div class="underline"></div>
+                
+                <p data-i18n="section_location_text">Encuéntranos en Mejicana 1481, a metros de la Costanera del Estrecho.</p>
+                
             </div>
             <div id="map"></div>
         </div>
@@ -262,7 +274,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4 style="color: #e3672a;" data-i18n="logo">Costanera</h4>
+                    <h4 style="color: #c0490ee0;" data-i18n="logo">Costanera</h4>
                     <p data-i18n="footer_text">Departamentos totalmente equipados en el fin del mundo. Tu hogar en Punta Arenas.</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/departamentoscostanera" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -301,6 +313,13 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
     
     <!-- Custom JS -->
     <script src="js/translations.js"></script>

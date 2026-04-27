@@ -1,5 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // 0. Initialize Lenis
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+    });
+
+    // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+    gsap.ticker.lagSmoothing(0);
+
+    // Make lenis accessible globally for other scripts if needed
+    window.lenis = lenis;
+
     // 1. Header Scroll Effect
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
@@ -57,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
+                lenis.scrollTo(targetElement, {
+                    offset: -80,
+                    duration: 1.5
                 });
             }
         });
